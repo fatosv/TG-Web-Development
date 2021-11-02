@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <label for="achternaam">Achternaam:</label><br>
+        <input type="text" id="achternaam" name="achternaam"><br>
+        <label for="voornaam">Voornaam:</label><br>
+        <input type="text" id="voornaam" name="voornaam"><br>
+        <input type="hidden" id="nummer" name="nummer" value="3000"><br>
+        <input type="submit" value="Ga"><br>
+    </form>
+
+    <p>Wat is je favoriete kleur?</p>
+    <form>
+        <input type="radio" id="rood" name="fav_kleur" value="Rood">
+        <label for="rood">Rood</label><br>
+        <input type="radio" id="geel" name="fav_kleur" value="Geel">
+        <label for="geel">Geel</label><br>
+        <input type="radio" id="blauw" name="fav_kleur" value="Blauw">
+        <label for="blauw">Blauw</label>
+    </form>
+
+    <p>Wat voor huisdieren heb je?</p>
+    <form>
+        <input type="checkbox" id="kat" name="kat" value="Kat">
+        <label for="kat">Kat(ten)</label><br>
+        <input type="checkbox" id="hond" name="hond" value="Hond">
+        <label for="hond">Hond(en)</label><br>
+        <input type="checkbox" id="vogel" name="vogel" value="Vogel">
+        <label for="vogel">Vogel(s)</label><br>
+        <input type="checkbox" id="anders" name="anders" value="Anders">
+        <label for="anders">Anders</label><br>
+        <input type="checkbox" id="geen" name="geen" value="Geen">
+        <label for="geen">Geen Huisdieren :(</label>
+    </form>
+    <br>
+    <form>
+        <label for="gebruikersnaam">Gebruikersnaam:</label><br>
+        <input type="text" id="gebruikersnaam" name="gebruikersnaam"><br>
+        <label for="wachtwoord">Wachtwoord:</label><br>
+        <input type="password" id="wachtwoord" name="wachtwoord"><br><br>
+        <input type="submit" value="Ga">
+        <input type="reset">
+    </form>
+    <br>
+    <form>
+        <label for="verjaardag">Verjaardag:</label>
+        <input type="date" id="verjaardag" name="verjaardag">
+    </form>
+    <br>
+    <form>
+        <label for="zoek">Zoek:</label>
+        <input type="search" id="zoek" name="zoek">
+        <input type="submit" value="Ga">
+    </form>
+    <br>
+    <form>
+        <label for="tijd">Kies een tijd:</label>
+        <input type="time" id="tijd" name="tijd">
+    </form>
+    <br>
+    <form>
+        <label for="email">E-mail adres:</label>
+        <input type="email" id="email" name="email">
+    </form>
+    <br>
+    <form>
+        <fieldset>
+        <legend>Persoonsgegevens:</legend>
+        <label for="achternaam">Achternaam:</label>
+        <input type="text" id="achternaam" name="achternaam"><br><br>
+        <label for="voornaam">Voornaam:</label>
+        <input type="text" id="voornaam" name="voornaam"><br><br>
+        <label for="geboortedatum">Geboortedatum</label>
+        <input type="date" id="geboortedatum" name="geboortedatum"><br><br>
+        <label for="man">M:</label>
+        <input type="radio" id="man" name="geslacht" value="Man">
+        <label for="vrouw">V:</label>
+        <input type="radio" id="vrouw" name="geslacht" value="Vrouw"><br><br>
+        <label for="postcode">Postcode:</label>
+        <input type="text" id="postcode" name="postcode"><br><br>
+        <label for="adres">Adres:</label>
+        <input type="text" id="adres" name="adres"><br>
+        </fieldset>
+        <input type="submit" value="Submit">
+        <input type="reset">
+    </form>
+</body>
+</html>
