@@ -1,0 +1,19 @@
+body {
+    color: white;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    height: 400px;
+    width: 400px;
+    border: white;
+    background: linear-gradient(36deg, rgba(12,14,12,1) 0%, rgba(9,121,59,1) 45%, rgba(137,204,166,1) 66%);
+    margin: auto;
+}
+
+
+
+
+
+
