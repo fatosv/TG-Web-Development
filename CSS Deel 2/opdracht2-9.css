@@ -1,0 +1,32 @@
+.boxA {
+    background-color: rgb(199, 16, 138);
+    height: 100px;
+    width: 100px;
+    padding: 10px;
+}
+
+.boxB {
+    background-color: rgb(153, 185, 123);
+    height: 100px;
+    width: 100px;
+    margin-left: 50px;
+    border: solid black 5px;
+}
+
+.boxC {
+    background-color: rgb(219, 125, 219);
+    height: 100px;
+    width: 100px;
+    margin: 20px 100px;
+    padding: 20px 25px;
+}
+
+.boxD {
+    background-color: rgb(60, 138, 148);
+    height: 100px;
+    width: 100px;
+    margin: 10px 150px;
+    border: dashed black 10px;
+    padding: 10px;
+    box-sizing: border-box;
+}

@@ -1,0 +1,12 @@
+.boxBoven {
+    background-color: mediumaquamarine;
+    height: 300px;
+    width: 300px;
+}
+
+.boxOnder {
+    background-color: mediumaquamarine;
+    height: 300px;
+    width: 300px;
+    margin-top: 100px;
+}

@@ -1,0 +1,9 @@
+div {
+    background-color: pink;
+    height: 100px;
+    width: 100px;
+    padding: 5px;
+    margin: 5px;
+    border-width: 5px;
+    box-sizing: border-box;
+}

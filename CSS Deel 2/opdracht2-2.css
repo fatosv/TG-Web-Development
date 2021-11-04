@@ -1,0 +1,12 @@
+div {
+    background-color: lightgreen;
+}
+
+.box1, .box2 {
+    background-color: green;
+    border: solid 2px black;
+}
+
+span {
+    background-color: white;
+}
