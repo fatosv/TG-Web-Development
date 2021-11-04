@@ -9,3 +9,11 @@ p {
 .paarsePara {
     color: purple;
 }
+
+#titelRechts {
+    text-align: right;
+}
+
+div p {
+    color: green;
+}
