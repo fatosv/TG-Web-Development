@@ -1,0 +1,17 @@
+.container {
+    position: relative;
+    height: 400px;
+    width: 600px;
+    border: solid black 1px;
+}
+
+.container::before {
+    content: " ";
+    background: url(https://img.rawpixel.com/s3fs-private/rawpixel_images/website_content/job579-pd24-109-chim-artprints.jpg?w=1000&dpr=1&fit=default&crop=default&q=65&vib=3&con=3&usm=15&bg=F4F4F3&ixlib=js-2.2.1&s=6130d002fea1407d4b61198986b71a18) center;
+    height: 400px;
+    width: 600px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}

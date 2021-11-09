@@ -1,0 +1,36 @@
+.paraBefore::before {
+    color: red;
+    content: "!";
+}
+
+.paraAfter {
+    background-color: powderblue;
+}
+
+.paraAfter::after {
+    background-color: pink;
+    content: "pink ribbon!";
+    border: dashed black;
+}
+
+.paraLetter::first-letter {
+    background-color: royalblue;
+    color: white;
+    font-size: 200%;
+}
+
+.paraLine::first-line {
+    background-color: yellowgreen;
+    color: tomato;
+    font-size: 150%;
+}
+
+.paraSelection::selection {
+    color:rgb(190, 214, 212);
+    background-color: rgb(216, 27, 200);
+}
+
+ol li::marker {
+    color:rgb(142, 15, 228);
+    font-size: 150%;
+}
