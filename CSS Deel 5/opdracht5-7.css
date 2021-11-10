@@ -1,0 +1,39 @@
+.container {
+    height: 400px;
+    width: 300px;
+    background-color: palegoldenrod;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 5px;
+}
+
+.container div {
+    background-color: plum;
+    width: 30px;
+}
+
+.bar1  {
+    height: 100%;
+}
+
+.bar2 {
+    height: 50%;
+}
+
+.bar3 {
+    height: 60%;
+}
+
+.bar4 {
+    height: 70%;
+}
+
+.bar5 {
+    height: 30%;
+}
+
+.bar6 {
+    height: 40%;
+}

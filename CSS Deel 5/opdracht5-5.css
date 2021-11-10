@@ -1,0 +1,49 @@
+.container1 {
+    height: 200px;
+    width: 300px;
+    background-color: paleturquoise;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    margin: 10px;
+    }
+
+    .container1 div {
+        border: solid green 2px;
+        margin: 5px;
+        padding: 10px;
+        text-align: center;
+        
+    }
+
+    .container2 {
+        height: 200px;
+        width: 300px;
+        background-color: pink;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 10px;
+    }
+
+    .container2 div {
+        border: solid yellow 2px;
+        margin: 5px;
+        padding: 10px;
+    }
+
+    .container3 {
+        height: 200px;
+        width: 300px;
+        background-color: rgb(21, 190, 72);
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin: 10px;
+    }
+
+    .container3 div {
+        border: solid purple 2px;
+        margin: 5px;
+        padding: 10px;
+    }
