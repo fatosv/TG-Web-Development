@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 3rem;
+        }
+
+        .circle {
+            height: 50px;
+            width: 50px;
+            background-color: blue;
+            border-radius: 50%;
+            animation-name: larger;
+            animation-duration: 1s;
+            animation-timing-function: ease;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+
+        .circle1 {
+            background-color: orange;  
+        }
+
+        body:hover .circle1 {
+            animation-delay: 0s;
+        }
+
+        body:hover .circle2 {
+            animation-delay: 333ms;
+        }
+
+        .circle3 {
+            background-color: pink;
+        }
+
+        body:hover .circle3 {
+            animation-delay: 666ms;
+        }
+
+        @keyframes larger {
+
+            0% {
+                transform: scale(1);
+            }
+
+            100% {
+                transform: scale(1.3);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="circle1 circle"></div>
+    <div class="circle2 circle"></div>
+    <div class="circle3 circle"></div>
+</body>
+</html>

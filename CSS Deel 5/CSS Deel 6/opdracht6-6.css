@@ -1,0 +1,78 @@
+.container {
+  height: 400px;
+  width: 700px;
+  border: none;
+  border-radius: 2%;
+  background-color: rgb(223, 236, 236);
+  position: relative;
+}
+
+.card {
+  height: 300px;
+  width: 200px;
+  border: none;
+  border-radius: 10%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 2px;
+  position: absolute;
+  top: 50px;
+  transition: transform;
+  box-shadow: 5px 10px 5px #88888865;
+}
+
+.card1 {
+  left: 20px;
+  background-image: url(https://img.rawpixel.com/s3fs-private/rawpixel_images/website_content/upwk61886941-wikimedia-image.jpg?w=1000&dpr=1&fit=default&crop=default&q=65&vib=3&con=3&usm=15&bg=F4F4F3&auto=format&ixlib=js-2.2.1&s=d600cfcbd2e9dae76cc3a36bc3206a2f);
+}
+
+.card1:hover {
+  transition: transform 1s ease-in 500ms;
+  transform: translate(0%, -10%);
+}
+
+.card1:hover ~ .card {
+  transition: transform 1s ease-in 500ms;
+  transform: translate(80%);
+}
+
+.card2 {
+  left: 100px;
+  background-image: url(https://img.rawpixel.com/s3fs-private/rawpixel_images/website_content/pf-lukestackpoole1-0286.jpg?w=1000&dpr=1&fit=default&crop=default&q=65&vib=3&con=3&usm=15&bg=F4F4F3&auto=format&ixlib=js-2.2.1&s=fa0ef176eb4e1ef2307a14b03c0994a0);
+}
+
+.card2:hover {
+  transition: transform 1s ease-in 500ms;
+  transform: translate(0%, -10%);
+}
+
+.card2:hover ~ .card {
+  transition: transform 1s ease-in 500ms;
+  transform: translate(80%);
+}
+
+.card3 {
+  left: 180px;
+  background-image: url(https://img.rawpixel.com/s3fs-private/rawpixel_images/website_content/upwk61907234-wikimedia-image.jpg?w=1000&dpr=1&fit=default&crop=default&q=65&vib=3&con=3&usm=15&bg=F4F4F3&auto=format&ixlib=js-2.2.1&s=4bd8936a3a8b95afcc84c4a335bdd4be);
+}
+
+.card3:hover {
+  transition: transform 1s ease-in 500ms;
+  transform: translate(0%, -10%);
+}
+
+.card3:hover ~ .card {
+  transition: transform 1s ease-in 500ms;
+  transform: translate(80%);
+}
+
+.card4 {
+  left: 260px;
+  background-image: url(https://img.rawpixel.com/s3fs-private/rawpixel_images/website_content/upwk61810539-wikimedia-image.jpg?w=1000&dpr=1&fit=default&crop=default&q=65&vib=3&con=3&usm=15&bg=F4F4F3&auto=format&ixlib=js-2.2.1&s=da6acba27f0abe79f3a606b4e1094ec0);
+}
+
+.card4:hover {
+  transition: transform 1s ease-in 500ms;
+  transform: translate(0%, -10%);
+}

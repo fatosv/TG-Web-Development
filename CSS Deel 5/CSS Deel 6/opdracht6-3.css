@@ -1,0 +1,54 @@
+.container {
+    height: 222px;
+    width: 500px;
+    border: solid black 1px;
+    background-color: rgb(221, 218, 218);
+}
+
+.box {
+    height: 40px;
+    width: 40px;
+    border: solid black 1px;
+    text-align: center;
+    margin: 2px;
+    line-height: 40px;
+    transition-property: transform background-color border-radius;
+    transition-duration: 3s;
+}
+
+body:hover .box1 {
+    transform:translate(454px);
+    background-color: rgb(137, 6, 155);
+    border-radius: 50%;
+    transition-timing-function: ease-in-out;
+}
+body:hover .box2 {
+    transition-delay: 500ms;
+    transition-timing-function: ease-in;
+    transform:translate(454px);
+    background-color: rgb(137, 6, 155);
+    border-radius: 30%;
+}
+
+body:hover .box3 {
+    transform:translate(454px);
+    background-color: rgb(137, 6, 155);
+    transition-timing-function: linear;
+}
+
+.box4 {
+    background-color: white;
+}
+
+body:hover .box4 {
+    transform:translate(454px);
+    background-color: rgb(137, 6, 155);
+    transition-timing-function: ease-in;
+}
+
+body:hover .box5 {
+    transform:translate(454px);
+    background-color: rgb(137, 6, 155);
+    transition-timing-function: cubic-bezier(.25,.54,.02,-0.43);
+}
+

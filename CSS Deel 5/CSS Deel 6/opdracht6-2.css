@@ -1,0 +1,8 @@
+p {
+    font-size: 20px;
+    transition: color 1s;
+}
+
+p:hover {
+    color: rgb(238, 14, 119);
+}

@@ -1,0 +1,54 @@
+.container {
+  height: 400px;
+  width: 600px;
+  background-color: thistle;
+  border: solid purple 1px;
+  position: relative;
+}
+
+.box {
+  height: 200px;
+  width: 200px;
+  border: solid purple 4px;
+  background-color: thistle;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  transition: transform top left;
+}
+
+body:hover .box {
+  transition: transform 2s ease-in 500ms, top 2s ease-in 500ms,
+    left 2s ease-in 500ms;
+  transform: rotate(35deg);
+  top: 100px;
+  left: 150px;
+}
+
+img {
+  height: 200px;
+  width: 200px;
+}
+
+.boxImage {
+  height: 200px;
+  width: 200px;
+  border: solid purple 4px;
+  position: absolute;
+}
+
+.boxColor {
+  height: 200px;
+  width: 200px;
+  margin: 4px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  background-color: transparent;
+  transition: background-color;
+}
+
+body:hover .boxColor {
+  transition: background-color 3s ease-in 1s;
+  background-color: rgba(255, 0, 0, 0.219);
+}
