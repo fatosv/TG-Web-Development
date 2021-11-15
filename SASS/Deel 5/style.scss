@@ -1,0 +1,22 @@
+$small-break: 480px;
+$large-break: 720px;
+
+p {
+  font-size: 20px;
+  color: red;
+
+  @media screen and (max-width: $small-break) {
+    font-size: 50px;
+    color: blue;
+  }
+  @media screen and (min-width: $large-break) {
+    font-size: 40px;
+    color: blueviolet;
+  }
+}
+
+h1 {
+  @media screen and (max-width: $small-break) {
+    font-size: 70px;
+  }
+}

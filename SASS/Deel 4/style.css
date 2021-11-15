@@ -1,0 +1,10 @@
+.button {
+  background-color: aquamarine;
+  color: blueviolet;
+}
+
+.button:hover {
+  background-color: blueviolet;
+  color: aquamarine;
+}
+/*# sourceMappingURL=style.css.map */

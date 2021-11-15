@@ -1,0 +1,13 @@
+@mixin buttonStyle {
+  background-color: aquamarine;
+  color: blueviolet;
+
+  &:hover {
+    background-color: blueviolet;
+    color: aquamarine;
+  }
+}
+
+.button {
+  @include buttonStyle;
+}
