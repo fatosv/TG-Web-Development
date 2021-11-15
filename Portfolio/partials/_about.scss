@@ -1,0 +1,24 @@
+@import "./variables";
+
+.about {
+  height: 500px;
+  width: 500px;
+  border: solid black 1px;
+  border-radius: 10%;
+  display: flex;
+  flex-direction: row;
+  justify-items: center;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 100px auto;
+  padding: 20px;
+  font-size: $font-small;
+
+  img {
+    height: 200px;
+    width: 150px;
+    margin: 20px;
+    border: none;
+    border-radius: 10%;
+  }
+}
