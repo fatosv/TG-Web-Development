@@ -3,9 +3,8 @@
 .projects {
   background-color: white;
   height: 450px;
-  width: 600px;
-  border: solid $accent-color4 1px;
-  border-radius: 10%;
+  width: 800px;
+  border: solid black 1px;
   display: flex;
   flex-direction: row;
   justify-items: center;
@@ -14,5 +13,5 @@
   margin: 100px auto;
   padding: 20px;
   font-size: $font-small;
-  box-shadow: 5px 10px $accent-color4;
+  box-shadow: 5px 10px 8px #888888;
 }
