@@ -1,12 +1,9 @@
-@import "./variables";
-
-.about {
+.skills {
   background: black;
   border: solid white 1px;
   box-shadow: 10px 8px white;
   height: 200px;
   width: 400px;
-  margin: 10px 20px;
 
   @media screen and (max-width: $break-small) {
     height: 70%;
@@ -24,10 +21,11 @@
   }
 
   p {
+    text-align: center;
     color: white;
-    font-size: $font-small;
-    padding: 5px;
-    margin: 10px;
-    line-height: 1.6;
+
+    i {
+      margin: 10px;
+    }
   }
 }
