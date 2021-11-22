@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Opdracht 1.2</title>
+  </head>
+  <body>
+    <h1>Opdracht 1.2</h1>
+    <ol type="a">
+      <li>
+        In de console zie ik: This is a string, with the value: Number. Dit is
+        niet wat ik verwachtte. typeof geeft dus aan wat voor datatype het is.
+      </li>
+      <li>
+        <ol type="i">
+          <li>This is a boolean, with the value: true</li>
+          <li>This is a boolean, with the value: false</li>
+          <li>This is a undefined, with the value: undefined</li>
+          <li>This is a number, with the value: 22</li>
+          <li>This is a bigint, with the value: 22</li>
+          <li>
+            Hier geeft de console een TypeError aan. Symbol kan namelijk niet
+            geconverteerd worden naar een string datatype.
+          </li>
+          <li>This is a object, with the value: null</li>
+          <li>This is a object, with the value: [object Object]</li>
+          <li>This is a object, with the value: [object Object]</li>
+          <li>
+            This is a function, with the value: function calculateSomething() {}
+          </li>
+        </ol>
+      </li>
+    </ol>
+
+    <script>
+      let typeQuestion = function calculateSomething() {};
+      console.log(
+        "This is a " + typeof typeQuestion + ", with the value: " + typeQuestion
+      );
+    </script>
+  </body>
+</html>

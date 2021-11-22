@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Opdracht 1.4</title>
+  </head>
+  <body>
+    <h1>Opdracht 1.4</h1>
+    <ol type="a">
+      <li>
+        Hier komt 2 en 2 uit. Eerst wordt er een prefix incrementation
+        toegepast, dat betekend dat er 1 bij wordt opgeteld en dat dat de nieuwe
+        value is. Vervolgens wordt er postfix incrementation toegepast. Hier
+        wordt er ook 1 bij opgeteld, maar de originele value blijft hetzelfde.
+        Het blijft dus 2.
+      </li>
+      <li>
+        Hier komt 1 en 3 uit. Dit komt omdat er eerst een postfix incrementation
+        wordt toegepast waarbij de value hetzelfde blijft maar er wel 1 bij
+        wordt opgeteld. Bij de prefix implementation wordt daar vervolgens weer
+        1 bij opgeteld.
+      </li>
+      <li>
+        Hier komt 4 en 2.4 uit. 10 past 2 keer in 24 en wat er dan overblijft
+        (de modulo) is 4. 24 gedeeld door 10 is 2.4
+      </li>
+      <li>
+        Hier komt false uit. De logical NOT operator veranderd true naar false
+        en vice versa. In dit geval is het dus true, maar wordt het door de !
+        als false verklaard.
+      </li>
+      <li>
+        <ol type="i">
+          <li>Hier komt false uit omdat het eigenlijk dus true moet zijn.</li>
+          <li>
+            Hier komt false uit, het is inderdaad een Boolean en wordt dus als
+            false gezien door deze operator.
+          </li>
+          <li>
+            Hier komt true uit omdat dat het tegenovergestelde is van false.
+          </li>
+          <li>
+            Hier komt false uit omdat het een string is die eigenlijk true is.
+          </li>
+          <li>
+            Hier komt false uit omdat dat het tegenovergestelde is van true.
+          </li>
+          <li>
+            Hier komt false uit omdat het een string is die eigenlijk true is.
+          </li>
+          <li>
+            Hier komt true uit omdat het eigenlijk false is dat de waarde null
+            is.
+          </li>
+          <li>
+            Hier komt true uit omdat het eigenlijk false is dat de waarde
+            undefined is.
+          </li>
+        </ol>
+      </li>
+      <li>
+        Met addition assignment wordt er een waarde toegevoegd aan een
+        variabale. Dus x += y is gelijk aan x = x + y. Dit werkt ook met
+        strings, dan wordt bijvoorbeeld tekst y aan tekst x toegevoegd.
+      </li>
+      <li>
+        Met subtraction assignment wordt er een waarde afgehaald van een
+        variabele. Dus x -= y is gelijk aan x = x - y. Hier kunnen geen strings
+        gebruikt worden.
+      </li>
+      <li>
+        Met multiplication assignment wordt een variabele vermenigvuldigd. Dus x
+        *= y is gelijk aan x = x * y. Hier kunnen geen strings gebruikt worden.
+      </li>
+      <li>
+        Met division assignment wordt een variabele gedeeld. Dus x /= y is
+        gelijk aan x = x / y. Hier kunnen geen strings gebruikt worden.
+      </li>
+      <li>
+        Met remainder assignment wordt een remainder toegekend aan een
+        variabele. Dus x %= y is gelijk aan x = x % y. Hier kunnen geen strings
+        gebruikt worden.
+      </li>
+      <li>
+        Met exponentiation assignment wordt een variabele verhoogd met een
+        bepaalde exponent. Dus x **= y is gelijk aan x = x ** y. Hier kunnen
+        geen strings gebruikt worden.
+      </li>
+    </ol>
+
+    <script>
+      let increment = 1;
+      console.log(increment++);
+      console.log(++increment);
+
+      let modulo = 24 % 10;
+      console.log(modulo);
+      let division = 24 / 10;
+      console.log(division);
+
+      let someNumber = undefined;
+      console.log(!someNumber);
+    </script>
+  </body>
+</html>
