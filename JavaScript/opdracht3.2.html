@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Opdracht 3.2</title>
+  </head>
+  <body>
+    <script>
+      // a.
+      let a = 5;
+      if (a === 3) {
+        console.log("gelijk aan drie");
+      } else if (a > 4) {
+        console.log("groter dan vier");
+      } else if (a > 11) {
+        console.log("groter dan elf");
+      } else if (a < 3) {
+        console.log("kleiner dan drie");
+      }
+
+      //b.
+      //   Als de waarde vier is geeft de console niets aan. Dit komt omdat daar geen code voor is geschreven, geen van de voorwaarden voldoen daaraan. Als de waarde 20 is geeft de console "groter dan vier" aan omdat hij daarna stopt met de code.
+
+      //c.
+      let month = 11;
+      if (month === 1) {
+        console.log("Januari");
+      } else if (month === 2) {
+        console.log("Februari");
+      } else if (month === 3) {
+        console.log("Maart");
+      } else if (month === 4) {
+        console.log("April");
+      } else if (month === 5) {
+        console.log("Mei");
+      } else if (month === 6) {
+        console.log("Juni");
+      } else if (month === 7) {
+        console.log("Juli");
+      } else if (month === 8) {
+        console.log("Augustus");
+      } else if (month === 9) {
+        console.log("September");
+      } else if (month === 10) {
+        console.log("Oktober");
+      } else if (month === 11) {
+        console.log("November");
+      } else if (month === 12) {
+        console.log("December");
+      } else {
+        console.log("Geen geldige maand!");
+      }
+      //d.
+      let monthNew = 5;
+      switch (monthNew) {
+        case 1:
+          console.log("Januari");
+          break;
+        case 2:
+          console.log("Februari");
+          break;
+        case 3:
+          console.log("Maart");
+          break;
+        case 4:
+          console.log("April");
+          break;
+        case 5:
+          console.log("Mei");
+          break;
+        case 6:
+          console.log("Juni");
+          break;
+        case 7:
+          console.log("Juli");
+          break;
+        case 8:
+          console.log("Augustus");
+          break;
+        case 9:
+          console.log("September");
+          break;
+        case 10:
+          console.log("Oktober");
+          break;
+        case 11:
+          console.log("November");
+          break;
+        case 12:
+          console.log("December");
+        default:
+          console.log("Geen geldige maand!");
+      }
+
+      //e.
+      let x = 3;
+
+      x <= 4 && x >= 0 ? (results = 2) : (results = 5);
+      console.log(results);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Opdracht 3.1</title>
+  </head>
+  <body>
+    <h1>Opdracht 3.1</h1>
+    <ol type="a">
+      <li>
+        == betekent dat de twee variabelen gelijk zijn in waarde. === betekent
+        dat de twee variabelen gelijk zijn in waarde en in data type.
+      </li>
+      <li>
+        > betekent groter dan. >= betekent groter dan of gelijk aan.
+        <!-- < betekent
+        kleiner dan. <= betekent kleiner dan of gelijk aan. -->
+      </li>
+    </ol>
+
+    <script>
+      //c.
+      let x = 4;
+      let y = 8;
+      if (x == 4 && y == 8) {
+        console.log("Result!");
+      }
+      //d.
+      if (x == 4 || y == 8) {
+        console.log("Result!");
+      }
+      //e.
+      if (!(x == 4 || y == 8)) {
+        console.log("No Result");
+      } else {
+        console.log("Result!");
+      }
+      //f.
+      if (x !== 4 && y !== 8) {
+        console.log("No Result");
+      } else {
+        console.log("Result!");
+      }
+      //g.
+      let a = 44;
+
+      if (a > 5 && a < 10) {
+        console.log("een");
+        //h.
+      } else if (a >= 11 && a <= 20) {
+        console.log("twee");
+        //i.
+      } else if (a == 21 || a == 23) {
+        console.log("drie");
+        //j.
+      } else if (a < 35 || 40 < a < 45) {
+        console.log("vier");
+      }
+
+      // //k.
+
+      // Als alles wordt omgezet naar if blokken werkt het nog steeds, maar als het getal hoger is dan de vierde optie geeft de console altijd "vier" aan.
+
+      // if (a > 5 && a < 10) {
+      //   console.log("een");
+      // }
+      // if (a >= 11 && a <= 20) {
+      //   console.log("twee");
+      // }
+      // if (a == 21 || a == 23) {
+      //   console.log("drie");
+      // }
+      // if (a < 35 || 40 < a < 45) {
+      //   console.log("vier");
+      // }
+    </script>
+  </body>
+</html>

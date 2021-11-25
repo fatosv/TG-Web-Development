@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Opdracht 2.1</title>
+  </head>
+  <body>
+    <h1>Opdracht 2.1</h1>
+    <script>
+      // a.
+      let someKittens =
+        "De poes van de buurman heeft kittens gehad! Hij vraagt of wij nog kittens willen.";
+      let someKittens1 = someKittens.slice(0, 43);
+      console.log(someKittens1);
+      let someKittens2 = someKittens.slice(44, 81);
+      console.log(someKittens2);
+      // b.
+      console.log(someKittens.toUpperCase());
+      // c.
+      let firstIndex = someKittens.indexOf("kittens");
+      console.log(firstIndex);
+      let lastIndex = someKittens.lastIndexOf("kittens");
+      console.log(lastIndex);
+      //   d.
+      let kittenChar1 = someKittens1.charAt();
+      console.log(kittenChar1); // Ik krijg de letter D, de eerste letter van de eerste zin
+      let kittenChar2 = someKittens2.charAt();
+      console.log(kittenChar2); // Ik krijg de letter H, de eerste letter van de tweede zin
+    </script>
+  </body>
+</html>

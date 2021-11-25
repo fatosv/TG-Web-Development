@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Opdracht 2.2</title>
+  </head>
+  <body>
+    <h1>Opdracht 2.2</h1>
+    <ol type="a">
+      <li>
+        Als het eerste getal hoger is dan het tweede getal in substring() worden
+        de waardes omgedraaid. In dit geval heb ik (10, 2) aangegegeven en het
+        stuk tekst dat eruit wordt gehaald begint op index 2 tot index 10.
+      </li>
+      <li>
+        Als het eerste getal hoger is dan het tweede getal in slice() laat de
+        console niets zien. Het is met slice() dus niet mogelijk om dit te doen.
+      </li>
+      <li>
+        Als er negatieve waarden worden gebruikt in substring() begint de tekst
+        automatisch bij index 0.
+      </li>
+      <li>
+        Als er negatieve waarden worden gebruikt in splice() laat de console
+        niets zien als het om de eerste waarde gaat. Als de tweede waarde
+        negetief is, wordt er terug geteld vanaf de laatste index van de string.
+      </li>
+    </ol>
+    <script>
+      let someKittens =
+        "De poes van de buurman heeft kittens gehad! Hij vraagt of wij nog kittens willen.";
+      let kittensubStr = someKittens.substring(10, 2);
+      console.log(kittensubStr);
+      let kittenSl = someKittens.slice(2, -15);
+      console.log(kittenSl);
+    </script>
+  </body>
+</html>
