@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Opdracht 4.1</title>
+  </head>
+  <body>
+    <h1>Opdracht 4.1</h1>
+
+    <button id="button1" onclick="helloButton()">Hello World!</button>
+    <button id="button2" onclick="secondButton(whatever)">:)</button>
+    <script>
+      //a.
+      //   function helloButton() {
+      //     console.log("Hello World!");
+      //   }
+
+      //b.
+      let button1 = document.getElementById("button1").innerText;
+      function helloButton() {
+        console.log(button1);
+      }
+
+      //c. In de console zie ik mijn parameter, dus Click!
+
+      let whatever = "Click!";
+
+      function secondButton(whatever) {
+        console.log(whatever);
+      }
+
+      //d.
+      let number = 5;
+
+      function multiplyIt() {
+        return number * 2;
+      }
+      let result = multiplyIt();
+      console.log(result);
+    </script>
+  </body>
+</html>
