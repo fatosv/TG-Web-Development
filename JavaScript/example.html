@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // Recursion
+
+      const coach = "Jens";
+
+      function logSingleLetter(someString) {
+        if (!someString) return; // guard clause
+        {
+          const firstLetter = someString[0];
+          console.log(firstLetter);
+          const remainingString = someString.slice(1);
+          logSingleLetter(remainingString);
+        }
+      }
+
+      logSingleLetter(coach);
+
+      // Calculating the amount of moves in Tower of Hanoi, based on the amount of towers
+
+      function calcHanoiMoves(towerSize) {
+        if (towerSize === 1) return 1;
+
+        const result = 2 * calcHanoiMoves(towerSize - 1) + 1;
+        return result;
+      }
+      console.log(calcHanoiMoves(3));
+    </script>
+  </body>
+</html>

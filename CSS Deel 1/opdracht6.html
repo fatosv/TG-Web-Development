@@ -1,27 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <link rel="stylesheet" href="opdracht6.css">
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+  <head>
+    <link rel="stylesheet" href="opdracht6.css" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Opdracht 6</title>
+  </head>
+  <body>
+    <h1>Opdracht 6</h1>
     <div>
-    <h1>Child selectors</h1>
-    <p>Hiermee selecteer je de directe child element van het eerste element. De syntax is A > B, waarbij B de directe child van A is. Bijvoorbeeld: deze paragraaf is een directe child van de &lt;div&gt; element erboven. Met de child selector kan deze &lt;p&gt; element groen gemaakt worden. </p>
+      <h1>Child selectors</h1>
+      <p>
+        Hiermee selecteer je de directe child element van het eerste element. De
+        syntax is A > B, waarbij B de directe child van A is. Bijvoorbeeld: deze
+        paragraaf is een directe child van de &lt;div&gt; element erboven. Met
+        de child selector kan deze &lt;p&gt; element groen gemaakt worden.
+      </p>
     </div>
-    <p>Deze selector is vooral handig als je specifieke child elementen wilt stijlen. Deze &lt;p&gt; element zit niet in de &lt;div&gt; element en wordt dus niet groen.</p>
+    <p>
+      Deze selector is vooral handig als je specifieke child elementen wilt
+      stijlen. Deze &lt;p&gt; element zit niet in de &lt;div&gt; element en
+      wordt dus niet groen.
+    </p>
     <div>
-    <h2>Adjacent selectors</h2>
-    <p>Deze selector wordt gebruikt voor een element die direct na een andere element komt, zolang beide elementen dezelfde parent element hebben. De syntax is A + B, waarbij B een directe opvolger is van A. Bijvoorbeeld: deze &lt;p&gt; element volgt direct na de &lt;h2&gt; element hierboven en kan dus met de adjacent selector rood gemaakt worden.</p>
-    <p>Deze &lt;p&gt; element wordt hierbij niet geselecteerd omdat het niet direct volgt na de &lt;h2&gt; element. Deze selector is dus vooral handig als je een specifieke element wilt selecteren zonder dat het andere child elementen meeneemt.</p>
-    </div>  
-    <div>
-        <h3>General selectors</h3>
-        <p>In tegenstelling tot de adjacent selector, selecteert de general selector wel alle elementen na het eerste element. De syntax is A ~ B, waarbij B een opvolger is van A en beide elementen dezelfde parent element hebben.</p>
-        <p>Bijvoorbeeld: met de general selector kunnen alle &lt;p&gt; elementen die volgen na de &lt;h3&gt; element blauw gemaakt worden. Het voordeel hiervan is dat je in een keer meerdere elementen kan bewerken die een specifieke element opvolgen.</p>
+      <h2>Adjacent selectors</h2>
+      <p>
+        Deze selector wordt gebruikt voor een element die direct na een andere
+        element komt, zolang beide elementen dezelfde parent element hebben. De
+        syntax is A + B, waarbij B een directe opvolger is van A. Bijvoorbeeld:
+        deze &lt;p&gt; element volgt direct na de &lt;h2&gt; element hierboven
+        en kan dus met de adjacent selector rood gemaakt worden.
+      </p>
+      <p>
+        Deze &lt;p&gt; element wordt hierbij niet geselecteerd omdat het niet
+        direct volgt na de &lt;h2&gt; element. Deze selector is dus vooral
+        handig als je een specifieke element wilt selecteren zonder dat het
+        andere child elementen meeneemt.
+      </p>
     </div>
-</body>
+    <div>
+      <h3>General selectors</h3>
+      <p>
+        In tegenstelling tot de adjacent selector, selecteert de general
+        selector wel alle elementen na het eerste element. De syntax is A ~ B,
+        waarbij B een opvolger is van A en beide elementen dezelfde parent
+        element hebben.
+      </p>
+      <p>
+        Bijvoorbeeld: met de general selector kunnen alle &lt;p&gt; elementen
+        die volgen na de &lt;h3&gt; element blauw gemaakt worden. Het voordeel
+        hiervan is dat je in een keer meerdere elementen kan bewerken die een
+        specifieke element opvolgen.
+      </p>
+    </div>
+  </body>
 </html>

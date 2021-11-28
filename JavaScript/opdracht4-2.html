@@ -11,11 +11,25 @@
     <p class="someText">Hello World!</p>
     <button onclick="buttonText()">Click me!</button>
 
+    <!-- <input type="text" onchange="logText()" /> -->
+
+    <button onclick="buttonFunction()">Button!</button>
+
     <script>
       function buttonText() {
         let button3 = document.getElementsByClassName("someText");
         button3[0].innerHTML = "Hello You!";
       }
+
+      function buttonFunction() {
+        let button4 = document.getElementsByTagName("button");
+        console.log("buttons, buttons everywhere");
+      }
+
+      // function logText() {
+      //   let randomText = document.getElementsByTagName("input");
+      //   console.log(randomText.value);
+      // }
     </script>
   </body>
 </html>
