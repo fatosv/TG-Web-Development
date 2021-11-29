@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Opdracht 4.3</title>
+  </head>
+  <body>
+    <h1>Opdracht 4.3</h1>
+    <button id="randomnumbtn" onclick="randomNumberFunction()">Random!</button>
+    <script>
+      //a. Er worden alleen nummers tussen 0 en 1 gelogd.
+      //   function randomNumberFunction() {
+      //     console.log(Math.random());
+      //   }
+
+      //b. met math.floor wordt het grootste integer kleiner dan of gelijk aan het gegeven nummer. In dit geval is dat dus altijd 0.
+      x = 25;
+      function randomNumberFunction() {
+        console.log(Math.floor(Math.random()) * x);
+      }
+    </script>
+  </body>
+</html>

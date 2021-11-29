@@ -10,26 +10,53 @@
     <h1>Opdracht 4.1</h1>
     <p class="someText">Hello World!</p>
     <button onclick="buttonText()">Click me!</button>
-
-    <!-- <input type="text" onchange="logText()" /> -->
-
     <button onclick="buttonFunction()">Button!</button>
+    <input type="text" onchange="logText()" />
+    <p>A paragraph!</p>
+    <p>Another paragraph!</p>
+    <p>How many paragraphs are on this page?</p>
+    <button onclick="lengthFunction()">Find Out!</button>
+    <button id="finalbutton" onclick="anotherButtonFunction()">
+      Another Button
+    </button>
+    <input id="input2" type="text" oninput="logParameter()" />
 
     <script>
+      //a. i. & v.
       function buttonText() {
         let button3 = document.getElementsByClassName("someText");
         button3[0].innerHTML = "Hello You!";
       }
-
+      //a. ii.
       function buttonFunction() {
         let button4 = document.getElementsByTagName("button");
         console.log("buttons, buttons everywhere");
       }
-
-      // function logText() {
-      //   let randomText = document.getElementsByTagName("input");
-      //   console.log(randomText.value);
-      // }
+      //a. iii.
+      function logText() {
+        let randomText = document.querySelector("input");
+        console.log(randomText.value);
+      }
+      //a. v.
+      function lengthFunction() {
+        let amountOfPara = document.querySelectorAll("p");
+        console.log(
+          "There are " +
+            amountOfPara.length +
+            " paragraph elements on this page!"
+        );
+      }
+      //a. vi
+      let finalButton = document.getElementById("finalbutton").innerText;
+      function anotherButtonFunction() {
+        console.log(finalButton);
+      }
+      //b. Met onchange wordt bij elke verandering gelogd ipv onsubmit waar pas wordt gelogd als er wordt gesubmit. Met .value geeft de console undefined aan, dit komt omdat de parameter al een waarde heeft.
+      function logParameter(text) {
+        text = "typing..";
+        let inputText = document.getElementById("input2");
+        console.log(text);
+      }
     </script>
   </body>
 </html>
