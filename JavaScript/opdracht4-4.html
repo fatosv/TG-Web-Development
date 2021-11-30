@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Opdracht 4.4</title>
+    <style>
+      div {
+        margin-top: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Opdracht 4.4</h1>
+    <h3>What's your name?</h3>
+    <input type="text" id="inputName" onchange="compareName()" />
+    <button onclick="displayMessage()">Check</button>
+    <div id="messageHere"></div>
+
+    <script>
+      //a.
+      function compareName(nameGroupMember) {
+        nameGroupMember = document.getElementById("inputName").value;
+        console.log(nameGroupMember);
+        switch (nameGroupMember) {
+          case "Alfijah":
+            console.log(`${nameGroupMember} is in your group!`);
+            return `${nameGroupMember} is in your group!`;
+
+          case "Fatos":
+            console.log(`${nameGroupMember} is in your group!`);
+            return `${nameGroupMember} is in your group!`;
+
+          case "Michael":
+            console.log(`${nameGroupMember} is in your group!`);
+            return `${nameGroupMember} is in your group!`;
+
+          case "Zico":
+            console.log(`${nameGroupMember} is in your group!`);
+            return `${nameGroupMember} is in your group!`;
+
+          default:
+            console.log("Who is this?!");
+            return "Who is this?!";
+        }
+      }
+      //b.
+      function displayMessage() {
+        document.getElementById("messageHere").innerText = compareName();
+      }
+
+      //c.
+      //   displayMessage = () =>
+      //     (document.getElementById("messageHere").innerText = compareName());
+    </script>
+  </body>
+</html>
