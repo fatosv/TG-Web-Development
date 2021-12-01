@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Opdracht 5.1</title>
+  </head>
+  <body>
+    <h1>Opdracht 5.1</h1>
+
+    <script>
+      //a.
+      let numberArray = [10, 5, 7, 8, 3, 9, 2, 4, 1, 6];
+      console.log(numberArray);
+
+      //b.
+      let fruitArray = [
+        "Appel",
+        "Aardbei",
+        "Banaan",
+        "Kiwi",
+        "Mandarijn",
+        "Druif",
+      ];
+      console.log(fruitArray);
+      //c.
+      console.log(fruitArray[0]);
+      console.log(fruitArray[1]);
+
+      //d.
+      const randomNumber =
+        numberArray[Math.floor(Math.random() * numberArray.length)];
+      console.log(randomNumber); // 4
+
+      console.log(fruitArray[4]);
+
+      //e.
+      console.log(fruitArray.length);
+      //f.
+      console.log(fruitArray[4 % 6]);
+
+      //g.
+      fruitArray.shift();
+      fruitArray.unshift("Peer");
+      console.log(fruitArray);
+      //h.
+      fruitArray.shift();
+      fruitArray.shift();
+      fruitArray.unshift("Peer");
+      fruitArray.unshift("Aardbei");
+      console.log(fruitArray);
+    </script>
+  </body>
+</html>

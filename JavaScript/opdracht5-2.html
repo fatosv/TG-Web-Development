@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Opdracht 5.2</title>
+  </head>
+  <body>
+    <h1>Opdracht 5.2</h1>
+
+    <script>
+      const dutchSports = ["Voetbal", "Hockey", "Schaatsen"];
+      //a.
+      console.log(dutchSports[0]);
+      console.log(dutchSports[1]);
+      console.log(dutchSports[2]);
+
+      //b.
+      for (let x in dutchSports) {
+        console.log(dutchSports[x]);
+      }
+      for (let a of dutchSports) {
+        console.log([a]);
+      }
+
+      //c.
+
+      for (let i = 1; i <= 10; i++) {
+        console.log(i * 2);
+      }
+
+      //d. & e.
+
+      for (let nestedLoop = 0; nestedLoop < 3; nestedLoop++) {
+        for (let y = 1; y <= 10; y++) console.log(y);
+        {
+          for (let i = 1; i <= 10; i++) {
+            console.log(i * 2);
+          }
+
+          for (let z = 1; z <= 10; z++) {
+            console.log(z * 3);
+          }
+        }
+      }
+    </script>
+  </body>
+</html>

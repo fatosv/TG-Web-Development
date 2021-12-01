@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const oneDay = 24 * 60 * 60 * 1000;
+
+      function dagVerschillen(day2, day1) {
+        day2 = new Date(day2);
+        day1 = new Date(day1);
+        return (verschil = Math.round(Math.abs((day2 - day1) / oneDay)));
+      }
+
+      console.log(dagVerschillen("12/01/2021", "11/01/2021"));
+    </script>
+  </body>
+</html>
