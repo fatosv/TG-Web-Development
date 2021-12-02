@@ -26,24 +26,46 @@
 
       //c.
 
-      for (let i = 1; i <= 10; i++) {
-        console.log(i * 2);
+      for (let i = 0; i <= 20; i++, i++) {
+        console.log(i);
       }
 
-      //d. & e.
+      //d. & e. & f.
 
       for (let nestedLoop = 0; nestedLoop < 3; nestedLoop++) {
-        for (let y = 1; y <= 10; y++) console.log(y);
+        for (let y = 1; y <= 10; y++) {
+          console.log(y);
+        }
         {
-          for (let i = 1; i <= 10; i++) {
-            console.log(i * 2);
+          for (let i = 2; i <= 20; i++, i++) {
+            console.log(i);
           }
 
-          for (let z = 1; z <= 10; z++) {
-            console.log(z * 3);
+          for (let z = 3; z <= 30; z++, z++, z++) {
+            console.log(z);
           }
         }
       }
+
+      //g.
+      let fiboArray = [0, 1];
+      let number1 = fiboArray[0];
+      let number2 = fiboArray[1];
+      let sum = number1 + number2;
+
+      for (let outerLoop = 0; outerLoop < 8; outerLoop++) {
+        console.log(sum);
+        number1 = number2;
+        number2 = sum;
+        sum = number1 + number2;
+      }
+
+      // while (sum <= 50) {
+      //   console.log(sum);
+      //   number1 = number2;
+      //   number2 = sum;
+      //   sum = number1 + number2;
+      // }
     </script>
   </body>
 </html>
