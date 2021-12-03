@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Opdracht 6.2</title>
+  </head>
+  <body>
+    <h1>Opdracht 6.2</h1>
+
+    <script>
+      //a. & b.
+      let club = {
+        name: "name",
+        type: "type",
+        members: "number",
+        contactInfo: {
+          address: "adress",
+          phone: "phonenumber",
+          contact: "name",
+        },
+      };
+
+      console.log(club);
+
+      //c.
+      let clubArray = [
+        {
+          name: "Club1",
+          type: "Football",
+          members: 386,
+          contactInfo: {
+            address: "Soccerstreet",
+            phone: "0612345678",
+            contact: "Messi",
+          },
+        },
+        {
+          name: "Club2",
+          type: "Tennis",
+          members: 225,
+          contactInfo: {
+            address: "Tennisstreet",
+            phone: "0687654321",
+            contact: "Serena",
+          },
+        },
+        {
+          name: "Club3",
+          type: "Basketball",
+          members: 330,
+          contactInfo: {
+            address: "Basketballstreet",
+            phone: "0624687531",
+            contact: "LeBron",
+          },
+        },
+        {
+          name: "Club4",
+          type: "Rugby",
+          members: 117,
+          contactInfo: {
+            address: "Rugbystreet",
+            phone: "0609876543",
+            contact: "Jonah",
+          },
+        },
+        {
+          name: "Club5",
+          type: "Gymnastics",
+          members: 451,
+          contactInfo: {
+            address: "Gymnasticsstreet",
+            phone: "0608642135",
+            contact: "Simone",
+          },
+        },
+      ];
+
+      console.log(clubArray);
+
+      clubArray.forEach((c) => {
+        console.log(
+          `${c.name} ${c.contactInfo.phone} ${c.contactInfo.contact}`
+        );
+      });
+    </script>
+  </body>
+</html>

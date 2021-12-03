@@ -52,20 +52,29 @@
       let number1 = fiboArray[0];
       let number2 = fiboArray[1];
       let sum = number1 + number2;
+      let lengthFibo = fiboArray.length;
 
-      for (let outerLoop = 0; outerLoop < 8; outerLoop++) {
+      while (sum <= 50) {
         console.log(sum);
         number1 = number2;
         number2 = sum;
         sum = number1 + number2;
       }
 
-      // while (sum <= 50) {
-      //   console.log(sum);
-      //   number1 = number2;
-      //   number2 = sum;
-      //   sum = number1 + number2;
-      // }
+      //h.
+      let bubbleArray = [2, 7, 5, 10, 4, 9, 3, 1, 8, 6];
+      const length = bubbleArray.length;
+
+      for (let i = 0; i < length; i++) {
+        for (let x = 0; x < length - i - 1; x++) {
+          if (bubbleArray[x] > bubbleArray[x + 1]) {
+            let y = bubbleArray[x];
+            bubbleArray[x] = bubbleArray[x + 1];
+            bubbleArray[x + 1] = y;
+          }
+        }
+        console.log(bubbleArray);
+      }
     </script>
   </body>
 </html>

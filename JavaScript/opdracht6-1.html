@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Opdracht 6.1</title>
+  </head>
+  <body>
+    <h1>Opdracht 6.1</h1>
+
+    <script>
+      //a. bij function constructor en class-based constructor, wordt de naam van de functie en de class ook gelogd.
+
+      //object constructor
+      let objectPet1 = new Object();
+      objectPet1.name = "Lola";
+      objectPet1.type = "Dog";
+      console.log(objectPet1);
+
+      //literal constructor
+      let objectPet2 = {
+        name: "Aslan",
+        type: "Cat",
+      };
+      console.log(objectPet2);
+
+      //function constructor
+      function PetFunction(name, type) {
+        this.name = name;
+        this.type = type;
+      }
+      let functionPet = new PetFunction("Ninja", "Turtle");
+      console.log(functionPet);
+
+      //singleton constructor
+      let objectPet3 = new (function () {
+        (this.name = "Donut"), (this.type = "Snake");
+      })();
+      console.log(objectPet3);
+
+      //class-based constructor
+      class PetClass {
+        constructor(name, type) {
+          this.name = "Tweety";
+          this.type = "Bird";
+        }
+      }
+      let objectPet4 = new PetClass("Tweety", "Bird");
+      console.log(objectPet4);
+
+      //b.
+      const newPetObject1 = Object.create(objectPet1);
+      objectPet1.type = "animal";
+      console.log(newPetObject1);
+
+      const newPetObject2 = Object.create(objectPet2);
+      objectPet2.type = "animal";
+      console.log(newPetObject2);
+
+      const newPetObject3 = Object.create(objectPet3);
+      objectPet3.type = "animal";
+      console.log(newPetObject3);
+
+      const newPetObject4 = Object.create(objectPet4);
+      objectPet4.type = "animal";
+      console.log(newPetObject4);
+
+      const newPetObject5 = Object.create(functionPet);
+      functionPet.type = "animal";
+      console.log(newPetObject5);
+
+      //c.
+      let personArray = [
+        {
+          name: "Red",
+          age: 27,
+        },
+        {
+          name: "Green",
+          age: 25,
+        },
+        {
+          name: "Pink",
+          age: 30,
+        },
+        {
+          name: "Blue",
+          age: 31,
+        },
+        {
+          name: "Orange",
+          age: 22,
+        },
+        {
+          name: "Grey",
+          age: 34,
+        },
+        {
+          name: "Gold",
+          age: 28,
+        },
+        {
+          name: "Silver",
+          age: 41,
+        },
+        {
+          name: "Lilac",
+          age: 29,
+        },
+        {
+          name: "Teal",
+          age: 43,
+        },
+      ];
+      console.log(personArray);
+
+      personArray.sort((a, b) => {
+        return a.age - b.age;
+      });
+
+      console.log(personArray);
+    </script>
+  </body>
+</html>

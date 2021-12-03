@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Opdracht 5.4</title>
+  </head>
+  <body>
+    <h1>Opdracht 5.4</h1>
+    <div>Some Text</div>
+    <div>Some Text</div>
+
+    <script>
+      let arrayLike = document.querySelectorAll("div");
+      console.log(arrayLike);
+
+      //a.
+      console.log(Array.from(arrayLike));
+
+      //b. filter() creates a new array filled with elements that pass a test provided by a function
+      const numbersArray = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+      const newNumbersArray = numbersArray.filter(checkNumbers);
+
+      function checkNumbers(x) {
+        return x <= 5;
+      }
+      console.log(newNumbersArray);
+
+      //c. find() returns the value of the first element that passes a test
+      const underFive = numbersArray.find(numbersFunction);
+
+      function numbersFunction(x) {
+        return x < 5;
+      }
+      console.log(underFive);
+
+      //d. some() checks if any elements pass a test provided by a function, executes once for each element and returns either true (and stops) or false (and stops)
+      const overTen = numbersArray.some(tenFunction);
+
+      function tenFunction(x) {
+        return x > 10;
+      }
+      console.log(overTen);
+
+      //e. every() executes a function for each element, returns true if true for all elements and returns false if false for one element
+      const everyUnderFive = numbersArray.every(numbersFunction);
+      console.log(everyUnderFive);
+
+      //f. includes() returns true if an array contains a specified value, false if not
+      const colors = ["Red", "Yellow", "Blue", "Green", "Purple"];
+      console.log(colors.includes("Pink"));
+    </script>
+  </body>
+</html>
