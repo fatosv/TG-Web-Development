@@ -1,0 +1,68 @@
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  display: flex;
+  height: 100vh;
+}
+
+.container {
+  height: 550px;
+  width: 400px;
+  margin: auto;
+  position: relative;
+}
+
+.image {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.slides {
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.button {
+  position: absolute;
+  background-color: transparent;
+  border: none;
+  height: 100%;
+  width: 15%;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.button:hover {
+  background-color: rgba(0, 0, 0, 0.205);
+}
+
+.buttonRight {
+  top: 0;
+  right: 0;
+}
+
+.navigation {
+  display: flex;
+  justify-content: center;
+  padding: 5px;
+}
+
+.indicator {
+  width: 10px;
+  height: 10px;
+  margin: 5px;
+  border: 0;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.205);
+}
+
+.indicatorCurrent {
+  background-color: black;
+}
