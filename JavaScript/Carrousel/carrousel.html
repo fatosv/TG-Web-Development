@@ -9,22 +9,28 @@
   </head>
   <body>
     <div class="container">
-      <button class="button buttonLeft"></button>
-      <div class="slides">
-        <img class="image image1" src="Wavelength225.png" />
-        <img class="image image2" src="Wavelength483.png" />
-        <img class="image image3" src="Wavelength555.png" />
-        <img class="image image4" src="Wavelength1086.png" />
-        <img class="image image5" src="Wavelength535.png" />
+      <button class="button buttonPrev"></button>
+      <div class="carouselImages">
+        <ul class="carouselList">
+          <li class="carouselSlide slideCurrent">
+            <img class="image" src="Wavelength225.png" />
+          </li>
+          <li class="carouselSlide">
+            <img class="image" src="Wavelength483.png" />
+          </li>
+          <li class="carouselSlide">
+            <img class="image" src="Wavelength555.png" />
+          </li>
+          <li class="carouselSlide">
+            <img class="image" src="Wavelength1086.png" />
+          </li>
+          <li class="carouselSlide">
+            <img class="image" src="Wavelength535.png" />
+          </li>
+        </ul>
       </div>
-      <button class="button buttonRight"></button>
-      <div class="navigation">
-        <button class="indicator indicatorCurrent"></button>
-        <button class="indicator"></button>
-        <button class="indicator"></button>
-        <button class="indicator"></button>
-        <button class="indicator"></button>
-      </div>
+      <button class="button buttonNext"></button>
     </div>
+    <script src="carrousel.js"></script>
   </body>
 </html>
