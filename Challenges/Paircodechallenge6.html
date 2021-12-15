@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="input-container">
+      <input class="input-number" type="number" />
+      <button class="transform-button" onclick="convertToText()">
+        Click me!
+      </button>
+    </div>
+    <p class="output-text"></p>
+
+    <script>
+      function convertToText() {
+        let inputNumber = document.querySelector(".input-number").value;
+        let outputPara = document.querySelector(".output-text");
+
+        let eenTotTien = [
+          "een",
+          "twee",
+          "drie",
+          "vier",
+          "vijf",
+          "zes",
+          "zeven",
+          "acht",
+          "negen",
+          "tien",
+        ];
+      }
+    </script>
+  </body>
+</html>

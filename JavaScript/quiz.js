@@ -1,15 +1,21 @@
-const container = document.querySelector(".quizContainer");
+const container = document.querySelector(".quiz-container");
 console.log(container);
 
 //add title and pagecounter
 const quizTitle = document.createElement("h1");
-quizTitle.innerText = "Math Quiz";
+quizTitle.innerText = "Math Problem";
 container.appendChild(quizTitle);
 console.log(quizTitle);
 let pageCounter = document.createElement("h2");
 pageCounter.innerText = "1/6";
 container.appendChild(pageCounter);
 console.log(pageCounter);
+
+//start button
+// const startButton = document.createElement("div");
+// container.appendChild(startButton);
+// startButton.classList.add("start-button");
+// startButton.innerText = "Start";
 
 //six quiz pages with a question and answers
 class QuizPage {
@@ -35,22 +41,23 @@ console.log(quizPageSix);
 
 const quizQuestion = document.createElement("div");
 const answerList = document.createElement("ul");
-
 container.appendChild(quizQuestion);
 container.appendChild(answerList);
-
-quizQuestion.classList.add("quizQuestion");
+quizQuestion.classList.add("quiz-question");
 
 //fill out the elements with text
 quizQuestion.innerText = quizPageOne.question;
 
 //create a loop to add all the answer elements
 for (let answer of quizPageOne.answers) {
-  const answerNumber = document.createElement("span");
   const quizAnswers = document.createElement("li");
-  answerList.appendChild(answerNumber);
   answerList.appendChild(quizAnswers);
+  quizAnswers.classList.add("quiz-answer");
 
-  answerNumber.innerText = " ";
+  const answerNumber = document.createElement("span");
+  quizAnswers.appendChild(answerNumber);
+  answerNumber.classList.add("answer-number");
+
+  answerNumber.innerText = 1;
   quizAnswers.innerText = answer;
 }
