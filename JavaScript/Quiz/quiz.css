@@ -1,15 +1,27 @@
 @import url("https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap");
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   font-family: "Indie Flower", cursive;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
   width: 100vw;
+}
+
+.container {
+  height: 550px;
+  width: 450px;
+  /* display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  align-items: center;  */
 }
 
 h1 {
@@ -22,29 +34,22 @@ h2 {
   margin: 0;
 }
 
-/* .start-button {
-
-} */
-
-.container {
-  height: 550px;
-  width: 450px;
-  display: flex;
-  justify-content: center;
-
-  border: solid black;
-}
-
 .start-button {
   height: 80px;
-  width: 150px;
+  width: 120px;
   background-color: cornflowerblue;
+  font-size: 3rem;
+  border: 3px solid black;
+  text-align: center;
+  margin: 0 auto;
+  cursor: pointer;
 }
 
 .quiz-container {
-  height: 550px;
-  width: 450px;
+  height: 100%;
+  width: 100%;
   background-color: cornflowerblue;
+  border: 2px solid black;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -77,6 +82,31 @@ li {
   background-color: white;
   font-size: 2rem;
   text-align: center;
+}
+.button-container {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 1%;
+}
+
+.prev-button {
+  height: 60px;
+  width: 100px;
+  background-color: cornflowerblue;
+  font-size: 1.5rem;
+  border: 2px solid black;
+  text-align: center;
+  cursor: pointer;
+}
+
+.next-button {
+  height: 60px;
+  width: 100px;
+  background-color: cornflowerblue;
+  font-size: 1.5rem;
+  border: 2px solid black;
+  text-align: center;
+  cursor: pointer;
 }
 
 .hide {
