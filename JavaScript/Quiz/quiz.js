@@ -4,6 +4,8 @@ container.appendChild(quizContainer);
 quizContainer.classList.add("quiz-container");
 quizContainer.classList.add("hide");
 let currentQuestionIndex;
+let quizQuestion;
+let quizAnswers;
 
 //add start button
 const startButton = document.createElement("div");
@@ -19,26 +21,26 @@ function startQuiz() {
   quizContainer.classList.remove("hide");
   buttonContainer.classList.remove("hide");
   currentQuestionIndex = 0;
+  addQuizPage();
+  // showQuestion();
 }
 
 //add title and pagecounter
 const quizTitle = document.createElement("h1");
 quizTitle.innerText = "Math Problem";
 quizContainer.appendChild(quizTitle);
-console.log(quizTitle);
 let pageCounter = document.createElement("h2");
 pageCounter.innerText = "1/6";
 quizContainer.appendChild(pageCounter);
-console.log(pageCounter);
 
-//add six quiz pages with a question and answers
+//create six quiz pages with a question and answers
 let quizPages = [
   {
-    question: "what is 49 - 32?",
+    question: "What is 49 - 32?",
     answers: [13, 17, -17, 16, 697],
   },
   {
-    question: "what is 70 - 14?",
+    question: "What is 70 - 14?",
     answers: [18, 79, 56, 32, 34],
   },
   {
@@ -60,29 +62,32 @@ let quizPages = [
 ];
 console.log(quizPages);
 
-//add elements for the quiz pages
-const quizQuestion = document.createElement("div");
-const answerList = document.createElement("ul");
-quizContainer.appendChild(quizQuestion);
-quizContainer.appendChild(answerList);
-quizQuestion.classList.add("quiz-question");
-
-//fill out the elements with text
-quizQuestion.innerText = quizPages[0].question;
-
-// create a loop to add all the answer elements
-for (let answer of quizPages[0].answers) {
-  const quizAnswers = document.createElement("li");
-  answerList.appendChild(quizAnswers);
-  quizAnswers.classList.add("quiz-answer");
-
-  const answerNumber = document.createElement("span");
-  quizAnswers.appendChild(answerNumber);
-  answerNumber.classList.add("answer-number");
-
-  answerNumber.innerText = 1;
-  quizAnswers.innerText = answer;
+function addQuizPage() {
+  //add elements for the quiz pages
+  quizQuestion = document.createElement("div");
+  const answerList = document.createElement("ul");
+  quizContainer.appendChild(quizQuestion);
+  quizContainer.appendChild(answerList);
+  quizQuestion.classList.add("quiz-question");
+  //add the questions
+  quizQuestion.innerText = quizPages[currentQuestionIndex].question;
+  // create a loop to add all the answer elements
+  for (let answer of quizPages[currentQuestionIndex].answers) {
+    quizAnswers = document.createElement("li");
+    answerList.appendChild(quizAnswers);
+    quizAnswers.classList.add("quiz-answer");
+    quizAnswers.innerText = answer;
+    console.log(quizAnswers);
+  }
 }
+
+// function showQuestion(quizQuestion, quizPages, currentQuestionIndex) {
+//   quizQuestion.innerText = " ";
+//   quizQuestion.innerText = quizPages[currentQuestionIndex].question;
+//   for (let answer of quizPages[currentQuestionIndex].answers) {
+//     quizAnswers.innerText = answer;
+//   }
+// }
 
 //add prev and next buttons
 const buttonContainer = document.createElement("div");
@@ -102,18 +107,26 @@ nextButton.innerText = "Next";
 nextButton.addEventListener("click", nextQuizPage);
 prevButton.addEventListener("click", prevQuizPage);
 
-function nextQuizPage() {
+function nextQuizPage(event) {
   currentQuestionIndex++;
   console.log(currentQuestionIndex);
-  console.log("next");
+  quizQuestion.innerText = quizPages[currentQuestionIndex].question;
+  console.log(quizPages[currentQuestionIndex].answers);
+  // quizAnswers = document.querySelectorAll(".quiz-answer");
+  // console.log(quizAnswers);
+  //TO FIX: only changes the last item in the list
+  for (let answer of quizPages[currentQuestionIndex].answers) {
+    quizAnswers.innerText = answer;
+  }
 }
+
 function prevQuizPage() {
   currentQuestionIndex--;
   console.log(currentQuestionIndex);
   console.log("prev");
 }
 
-//class QuizPage {
+// class QuizPage {
 //   constructor(question, answers) {
 //     this.question = question;
 //     this.answers = answers;
