@@ -5,7 +5,6 @@ quizContainer.classList.add("quiz-container");
 quizContainer.classList.add("hide");
 let currentQuestionIndex;
 let quizQuestion;
-let quizAnswers;
 
 //add start button
 const startButton = document.createElement("div");
@@ -22,7 +21,6 @@ function startQuiz() {
   buttonContainer.classList.remove("hide");
   currentQuestionIndex = 0;
   addQuizPage();
-  // showQuestion();
 }
 
 //add title and pagecounter
@@ -30,7 +28,7 @@ const quizTitle = document.createElement("h1");
 quizTitle.innerText = "Math Problem";
 quizContainer.appendChild(quizTitle);
 let pageCounter = document.createElement("h2");
-pageCounter.innerText = "1/6";
+pageCounter.innerText = "1 / 6";
 quizContainer.appendChild(pageCounter);
 
 //create six quiz pages with a question and answers
@@ -77,17 +75,8 @@ function addQuizPage() {
     answerList.appendChild(quizAnswers);
     quizAnswers.classList.add("quiz-answer");
     quizAnswers.innerText = answer;
-    console.log(quizAnswers);
   }
 }
-
-// function showQuestion(quizQuestion, quizPages, currentQuestionIndex) {
-//   quizQuestion.innerText = " ";
-//   quizQuestion.innerText = quizPages[currentQuestionIndex].question;
-//   for (let answer of quizPages[currentQuestionIndex].answers) {
-//     quizAnswers.innerText = answer;
-//   }
-// }
 
 //add prev and next buttons
 const buttonContainer = document.createElement("div");
@@ -103,28 +92,73 @@ buttonContainer.appendChild(nextButton);
 nextButton.classList.add("next-button");
 nextButton.innerText = "Next";
 
-//go to next page
+//go to prev/next page
 nextButton.addEventListener("click", nextQuizPage);
 prevButton.addEventListener("click", prevQuizPage);
 
-function nextQuizPage(event) {
+//when i click next, show the next question and answers
+function nextQuizPage() {
   currentQuestionIndex++;
   console.log(currentQuestionIndex);
+  if (currentQuestionIndex >= quizPages.length) {
+    restartQuiz();
+  }
+  pageCounter.innerText = `${currentQuestionIndex + 1} / 6`;
+
   quizQuestion.innerText = quizPages[currentQuestionIndex].question;
   console.log(quizPages[currentQuestionIndex].answers);
-  // quizAnswers = document.querySelectorAll(".quiz-answer");
-  // console.log(quizAnswers);
-  //TO FIX: only changes the last item in the list
-  for (let answer of quizPages[currentQuestionIndex].answers) {
-    quizAnswers.innerText = answer;
+  quizAnswers = document.querySelectorAll(".quiz-answer");
+  for (let i = 0; i < quizAnswers.length; i++) {
+    quizAnswers.forEach(function (answers, index) {
+      quizAnswers[index].innerText =
+        quizPages[currentQuestionIndex].answers[index];
+    });
   }
 }
 
+//when i click prev, show the previous question and answers
 function prevQuizPage() {
-  currentQuestionIndex--;
   console.log(currentQuestionIndex);
-  console.log("prev");
+
+  console.log(currentQuestionIndex);
+  if (currentQuestionIndex === 0) {
+    return;
+  }
+  currentQuestionIndex--;
+  pageCounter.innerText = `${currentQuestionIndex + 1} / 6`;
+  quizQuestion.innerText = quizPages[currentQuestionIndex].question;
+  quizAnswers = document.querySelectorAll(".quiz-answer");
+  for (let i = 0; i < quizAnswers.length; i++) {
+    quizAnswers.forEach(function (answers, index) {
+      quizAnswers[index].innerText =
+        quizPages[currentQuestionIndex].answers[index];
+    });
+  }
 }
+//when i click next on the last question the total score & restart button appears
+//total score needs to be calculated
+//restart needs to lead back to the start of the quiz
+function restartQuiz() {
+  if (currentQuestionIndex === quizPages.length) {
+    console.log("final");
+    quizContainer.classList.add("hide");
+    buttonContainer.classList.add("hide");
+    const totalScore = document.createElement("p");
+    container.appendChild(totalScore);
+    totalScore.innerText = "You got .. out of 6 questions right!";
+    const restartButton = document.createElement("div");
+    container.appendChild(restartButton);
+    restartButton.classList.add("restart-button");
+    restartButton.innerText = "Restart";
+
+    restartButton.addEventListener("click", () => {
+      restartButton.classList.add("hide");
+      totalScore.classList.add("hide");
+      startButton.classList.remove("hide");
+    })
+  }
+}
+
 
 // class QuizPage {
 //   constructor(question, answers) {
@@ -144,3 +178,12 @@ function prevQuizPage() {
 // console.log(quizPageFive);
 // let quizPageSix = new QuizPage("What is 21 - 16?", [170, 18, 5, 2, 26]);
 // console.log(quizPageSix);
+
+// const questionArray = [
+//   quizPageOne,
+//   quizPageTwo,
+//   quizPageThree,
+//   quizPageFour,
+//   quizPageFive,
+//   quizPageSix,
+// ];
