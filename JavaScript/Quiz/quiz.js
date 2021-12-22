@@ -5,6 +5,8 @@ quizContainer.classList.add("quiz-container");
 quizContainer.classList.add("hide");
 let currentQuestionIndex;
 let quizQuestion;
+let answerList;
+let pageCounter;
 
 //add start button
 const startButton = document.createElement("div");
@@ -24,38 +26,48 @@ function startQuiz() {
 }
 
 //add title and pagecounter
-const quizTitle = document.createElement("h1");
-quizTitle.innerText = "Math Problem";
-quizContainer.appendChild(quizTitle);
-let pageCounter = document.createElement("h2");
-pageCounter.innerText = "1 / 6";
-quizContainer.appendChild(pageCounter);
+function addTitle() {
+  const quizTitle = document.createElement("h1");
+  quizTitle.innerText = "Math Problem";
+  quizContainer.appendChild(quizTitle);
+  pageCounter = document.createElement("h2");
+  pageCounter.innerText = "1 / 6";
+  quizContainer.appendChild(pageCounter);
+  pageCounter.classList.add(".page-counter");
+}
+addTitle();
 
 //create six quiz pages with a question and answers
 let quizPages = [
   {
     question: "What is 49 - 32?",
     answers: [13, 17, -17, 16, 697],
+    correct: 1,
   },
   {
     question: "What is 70 - 14?",
     answers: [18, 79, 56, 32, 34],
+    correct: 2,
   },
   {
     question: "What is 80 - 15?",
     answers: [74, 65, 93, 40, 975],
+    correct: 1,
   },
   {
     question: "What is 10 - 20?",
     answers: [-350, -15, -10, -34, 34],
+    correct: 2,
   },
   {
     question: "What is 56 + 11?",
     answers: [102, 37, 44, 67, 50],
+    correct: 3,
   },
   {
     question: "What is 21 - 16?",
     answers: [170, 18, 5, 2, 26],
+    correct: 2,
   },
 ];
 console.log(quizPages);
@@ -63,7 +75,8 @@ console.log(quizPages);
 function addQuizPage() {
   //add elements for the quiz pages
   quizQuestion = document.createElement("div");
-  const answerList = document.createElement("ul");
+  answerList = document.createElement("ul");
+  answerList.classList.add(".answer-list");
   quizContainer.appendChild(quizQuestion);
   quizContainer.appendChild(answerList);
   quizQuestion.classList.add("quiz-question");
@@ -118,9 +131,6 @@ function nextQuizPage() {
 
 //when i click prev, show the previous question and answers
 function prevQuizPage() {
-  console.log(currentQuestionIndex);
-
-  console.log(currentQuestionIndex);
   if (currentQuestionIndex === 0) {
     return;
   }
@@ -155,10 +165,25 @@ function restartQuiz() {
       restartButton.classList.add("hide");
       totalScore.classList.add("hide");
       startButton.classList.remove("hide");
-    })
+      startButton.addEventListener("click", () => {
+        resetQuiz();
+        addTitle();
+        startQuiz();
+      });
+    });
   }
 }
 
+function resetQuiz() {
+  while (quizContainer.firstChild) {
+    quizContainer.removeChild(quizContainer.firstChild);
+  }
+}
+
+//when an answer is selected it turns red or green
+// answerList.addEventListener("click", () => {
+//   console.log("clicked");
+// });
 
 // class QuizPage {
 //   constructor(question, answers) {

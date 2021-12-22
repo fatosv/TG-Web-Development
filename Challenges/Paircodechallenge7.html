@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <script src="Paircodechallenge7.js" defer></script>
+    <link rel="stylesheet" href="Paircodechallenge7.css" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="main-container">
+      <div class="form-container">
+        <form  class="form">
+          <h3>Naam</h3>
+          <input
+            type="text"
+            id="naam"
+            placeholder="Naam"
+          />
+
+          <h3>Telefoonnummer</h3>
+          <input onchange="logText()" 
+            type="number"
+            id="telefoon"
+            placeholder="Telefoonnummer"
+          />
+          <h3>Straat</h3>
+          <input onchange="logText()" 
+            type="text"
+            id="straat"
+            placeholder="Straat"
+          />
+
+          <h3>Huisnummer</h3>
+          <input onchange="logText()" 
+            type="number"
+            id="huisnummer"
+            placeholder="Huisnummer"
+          />
+          <h3>Postcode</h3>
+          <input onchange="logText()" 
+            type="text"
+            id="postcode"
+            placeholder="Postcode"
+          />
+
+          <h3>Stad</h3>
+          <input onchange="logText()" 
+            type="text"
+            id="stad"
+            placeholder="Stad"
+          />
+
+          <h3>E-mail</h3>
+          <input onchange="logText()" 
+            type="email"
+            id="email"
+            placeholder="email"
+          />
+
+          <button onclick="clickFunction()" class="button">Verzend</button>
+        </form>
+      </div>
+
+      <div class="id-card">
+        <div class="image"></div>
+        <ul>
+          <li class="card-naam">Naam:</li>
+          <li class="card-nummer">Telefoonnummer:</li>
+          <li class="card-adres">Adres:</li>
+          <li class="card-email">Email:</li>
+          <li class="card-id">UserID:</li>
+        </ul>
+      </div>
+    </div>
+</div>
+  </body>
+</html>
