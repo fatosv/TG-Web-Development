@@ -7,6 +7,7 @@ let currentQuestionIndex;
 let quizQuestion;
 let answerList;
 let pageCounter;
+let totalCorrect = 0;
 
 //add start button
 const startButton = document.createElement("div");
@@ -42,32 +43,32 @@ let quizPages = [
   {
     question: "What is 49 - 32?",
     answers: [13, 17, -17, 16, 697],
-    correct: 1,
+    correct: 17,
   },
   {
     question: "What is 70 - 14?",
     answers: [18, 79, 56, 32, 34],
-    correct: 2,
+    correct: 56,
   },
   {
     question: "What is 80 - 15?",
     answers: [74, 65, 93, 40, 975],
-    correct: 1,
+    correct: 65,
   },
   {
     question: "What is 10 - 20?",
     answers: [-350, -15, -10, -34, 34],
-    correct: 2,
+    correct: -10,
   },
   {
     question: "What is 56 + 11?",
     answers: [102, 37, 44, 67, 50],
-    correct: 3,
+    correct: 67,
   },
   {
     question: "What is 21 - 16?",
     answers: [170, 18, 5, 2, 26],
-    correct: 2,
+    correct: 5,
   },
 ];
 console.log(quizPages);
@@ -76,7 +77,7 @@ function addQuizPage() {
   //add elements for the quiz pages
   quizQuestion = document.createElement("div");
   answerList = document.createElement("ul");
-  answerList.classList.add(".answer-list");
+  answerList.classList.add("answer-list");
   quizContainer.appendChild(quizQuestion);
   quizContainer.appendChild(answerList);
   quizQuestion.classList.add("quiz-question");
@@ -88,6 +89,21 @@ function addQuizPage() {
     answerList.appendChild(quizAnswers);
     quizAnswers.classList.add("quiz-answer");
     quizAnswers.innerText = answer;
+    quizAnswers.addEventListener("click", selectAnswer);
+  }
+}
+
+//select an answer and determine if it's correct or wrong
+function selectAnswer(e) {
+  const selectedAnswer = e.target.innerText;
+  console.log(selectedAnswer);
+  const correctAnswer = quizPages[currentQuestionIndex].correct;
+  if (selectedAnswer == correctAnswer) {
+    console.log("correct");
+    totalCorrect++;
+    console.log(totalCorrect);
+  } else {
+    console.log("wrong");
   }
 }
 
@@ -117,7 +133,6 @@ function nextQuizPage() {
     restartQuiz();
   }
   pageCounter.innerText = `${currentQuestionIndex + 1} / 6`;
-
   quizQuestion.innerText = quizPages[currentQuestionIndex].question;
   console.log(quizPages[currentQuestionIndex].answers);
   quizAnswers = document.querySelectorAll(".quiz-answer");
@@ -155,7 +170,7 @@ function restartQuiz() {
     buttonContainer.classList.add("hide");
     const totalScore = document.createElement("p");
     container.appendChild(totalScore);
-    totalScore.innerText = "You got .. out of 6 questions right!";
+    totalScore.innerText = `You got ${totalCorrect} out of 6 questions right!`;
     const restartButton = document.createElement("div");
     container.appendChild(restartButton);
     restartButton.classList.add("restart-button");
@@ -179,11 +194,6 @@ function resetQuiz() {
     quizContainer.removeChild(quizContainer.firstChild);
   }
 }
-
-//when an answer is selected it turns red or green
-// answerList.addEventListener("click", () => {
-//   console.log("clicked");
-// });
 
 // class QuizPage {
 //   constructor(question, answers) {

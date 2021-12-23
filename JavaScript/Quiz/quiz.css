@@ -82,6 +82,14 @@ li {
   cursor: pointer;
 }
 
+.correct {
+  background-color: green;
+}
+
+.wrong {
+  background-color: red;
+}
+
 .button-container {
   display: flex;
   justify-content: space-evenly;

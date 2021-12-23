@@ -1,79 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-      <script src="Paircodechallenge7.js" defer></script>
-    <link rel="stylesheet" href="Paircodechallenge7.css" />
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Form</title>
+    <link rel="stylesheet" href="Paircodechallenge7.css" />
+    <script src="Paircodechallenge7.js" type="text/javascript" defer></script>
   </head>
   <body>
-    <div class="main-container">
-      <div class="form-container">
-        <form  class="form">
-          <h3>Naam</h3>
-          <input
-            type="text"
-            id="naam"
-            placeholder="Naam"
-          />
 
-          <h3>Telefoonnummer</h3>
-          <input onchange="logText()" 
-            type="number"
-            id="telefoon"
-            placeholder="Telefoonnummer"
-          />
-          <h3>Straat</h3>
-          <input onchange="logText()" 
-            type="text"
-            id="straat"
-            placeholder="Straat"
-          />
+    <form action="page_submission_URL" method="post">
+    <div class="container">
+      <div class="form">
+        <label>Naam:</label>
+        <input name="naam" placeholder= "Naam" required />
+      
+        <label>Telefoon:</label>
+        <input name="telf" placeholder=" Tel nummer" required />
 
-          <h3>Huisnummer</h3>
-          <input onchange="logText()" 
-            type="number"
-            id="huisnummer"
-            placeholder="Huisnummer"
-          />
-          <h3>Postcode</h3>
-          <input onchange="logText()" 
-            type="text"
-            id="postcode"
-            placeholder="Postcode"
-          />
+        <label>Straatnaam:</label>
+        <input name="straat" placeholder=" Street name" required />
 
-          <h3>Stad</h3>
-          <input onchange="logText()" 
-            type="text"
-            id="stad"
-            placeholder="Stad"
-          />
+        <label>Huisnummer:</label>
+        <input name="nummer" placeholder="Huisnummer " required />
 
-          <h3>E-mail</h3>
-          <input onchange="logText()" 
-            type="email"
-            id="email"
-            placeholder="email"
-          />
+        <label>Postcode:</label>
+        <input name="postcode" placeholder="Postcode" required />
+       
+        <label>Stad:</label>
+        <input name="stad" placeholder="Stad" required />
 
-          <button onclick="clickFunction()" class="button">Verzend</button>
-        </form>
+        <label>Email:</label>
+        <input name="email"placeholder="Email" required>
+
+        <input type="button" value="Send" class="button" />
       </div>
+    </form>
 
-      <div class="id-card">
-        <div class="image"></div>
-        <ul>
-          <li class="card-naam">Naam:</li>
-          <li class="card-nummer">Telefoonnummer:</li>
-          <li class="card-adres">Adres:</li>
-          <li class="card-email">Email:</li>
-          <li class="card-id">UserID:</li>
-        </ul>
+      <div class="card">
+        <div class="image-container"></div>
+        <div>
+          <p>Naam:</p>
+          <p class="displayNaam"></p>
+        </div>
+        <div>
+          <p>Telefoon:</p>
+          <p class="displayTel"></p>
+        </div>
+        <div>
+          <p>Adres:</p>
+          <p class="displayStraat"></p>
+        </div>
+        <div>
+          <p>Email:</p>
+          <p class="displayEmail"></p>
+        </div>
+        
       </div>
     </div>
-</div>
   </body>
 </html>
+

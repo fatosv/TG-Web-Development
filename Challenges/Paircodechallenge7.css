@@ -1,5 +1,90 @@
-body {
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,500;1,700&display=swap");
+
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --hue-neutral: 121;
+  --saturation: 6%;
+  --lightness: 60%;
+  --hue-middle: 0;
+  --hue-correct: 145;
+
+  --card-width: 70%;
+  --card-max-width: 400px;
+  --card-height: 400px;
+}
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: hsl(0, 0%, 3%);
   display: flex;
+}
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 85vw;
+  height: 77vh;
+}
+
+.form {
+  width: 25em;
+  height: 30em;
+  display: flex;
+  gap: 2%;
+  flex-direction: column;
+  background-color: hsl(0, 0%, 96%);
+  padding: 15px;
+  margin: 0 5em;
+  box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.3);
+  border-radius: 1em;
+  filter: brightness(0.9);
+}
+
+.button {
+  width: 200px;
+  margin: auto;
+  padding: 15px;
+  border-radius: 15px;
+}
+
+.card {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  background: hsl(0, 0%, 96%);
+  width: var(--card-width);
+  max-width: var(--card-max-width);
+  text-align: center;
+  padding: 1em;
+  min-width: 250px;
+  height: var(--card-height);
+  color: rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.3);
+  border-radius: 1em;
+  filter: brightness(0.9);
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 1em;
+}
+
+p {
+  text-align: left;
+}
+.image-container {
+  width: 10em;
+  height: 9em;
+  position: relative;
+  background-size: cover;
+  margin-bottom: 2em;
+  border-radius: 100%;
+  padding: 1em;
+  box-shadow: inset 0px 0px 17px 0px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0px 0px 17px 0px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0px 0px 17px 0px rgba(0, 0, 0, 0.3);
+  background-image: url("https://images.unsplash.com/photo-1622107201596-af87e19af55d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80");
 }
