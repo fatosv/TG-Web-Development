@@ -3,11 +3,48 @@ const quizContainer = document.createElement("div");
 container.appendChild(quizContainer);
 quizContainer.classList.add("quiz-container");
 quizContainer.classList.add("hide");
-let currentQuestionIndex;
-let quizQuestion;
-let answerList;
-let pageCounter;
+let currentQuestionIndex, quizQuestion, answerList, pageCounter;
 let totalCorrect = 0;
+
+//create six quiz pages with a question and answers
+let quizPages = [
+  {
+    question: "What is 49 - 32?",
+    answers: [13, 17, -17, 16, 697],
+    correct: 17,
+    correctIndex: 1,
+  },
+  {
+    question: "What is 70 - 14?",
+    answers: [18, 79, 56, 32, 34],
+    correct: 56,
+    correctIndex: 2,
+  },
+  {
+    question: "What is 80 - 15?",
+    answers: [74, 65, 93, 40, 975],
+    correct: 65,
+    correctIndex: 1,
+  },
+  {
+    question: "What is 10 - 20?",
+    answers: [-350, -15, -10, -34, 34],
+    correct: -10,
+    correctIndex: 2,
+  },
+  {
+    question: "What is 56 + 11?",
+    answers: [102, 37, 44, 67, 50],
+    correct: 67,
+    correctIndex: 3,
+  },
+  {
+    question: "What is 21 - 16?",
+    answers: [170, 18, 5, 2, 26],
+    correct: 5,
+    correctIndex: 2,
+  },
+];
 
 //add start button
 const startButton = document.createElement("div");
@@ -38,41 +75,6 @@ function addTitle() {
 }
 addTitle();
 
-//create six quiz pages with a question and answers
-let quizPages = [
-  {
-    question: "What is 49 - 32?",
-    answers: [13, 17, -17, 16, 697],
-    correct: 17,
-  },
-  {
-    question: "What is 70 - 14?",
-    answers: [18, 79, 56, 32, 34],
-    correct: 56,
-  },
-  {
-    question: "What is 80 - 15?",
-    answers: [74, 65, 93, 40, 975],
-    correct: 65,
-  },
-  {
-    question: "What is 10 - 20?",
-    answers: [-350, -15, -10, -34, 34],
-    correct: -10,
-  },
-  {
-    question: "What is 56 + 11?",
-    answers: [102, 37, 44, 67, 50],
-    correct: 67,
-  },
-  {
-    question: "What is 21 - 16?",
-    answers: [170, 18, 5, 2, 26],
-    correct: 5,
-  },
-];
-console.log(quizPages);
-
 function addQuizPage() {
   //add elements for the quiz pages
   quizQuestion = document.createElement("div");
@@ -95,17 +97,25 @@ function addQuizPage() {
 
 //select an answer and determine if it's correct or wrong
 function selectAnswer(e) {
-  const selectedAnswer = e.target.innerText;
+  const selectedAnswer = e.target;
   console.log(selectedAnswer);
   const correctAnswer = quizPages[currentQuestionIndex].correct;
-  if (selectedAnswer == correctAnswer) {
+  if (selectedAnswer.innerText == correctAnswer) {
     console.log("correct");
     totalCorrect++;
-    console.log(totalCorrect);
+    alert("correct");
+    // selectedAnswer.classList.add("correct");
   } else {
     console.log("wrong");
+    alert("wrong");
+    // selectedAnswer.classList.add("wrong");
   }
 }
+
+// function clearStatus(element) {
+//   selectedAnswer.classList.remove("correct");
+//   selectedAnswer.classList.remove("wrong");
+// }
 
 //add prev and next buttons
 const buttonContainer = document.createElement("div");
@@ -127,6 +137,7 @@ prevButton.addEventListener("click", prevQuizPage);
 
 //when i click next, show the next question and answers
 function nextQuizPage() {
+  // clearStatus();
   currentQuestionIndex++;
   console.log(currentQuestionIndex);
   if (currentQuestionIndex >= quizPages.length) {

@@ -1,0 +1,80 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto Mono", monospace;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+}
+
+.container {
+  height: 600px;
+  width: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.stopwatch {
+  height: 80%;
+  width: 80%;
+  border-radius: 50%;
+  background-color: black;
+  border: 5px solid whitesmoke;
+  box-shadow: 0px 0px 13px 7px #f2f7f3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.timer {
+  font-size: 4.5rem;
+  color: white;
+  margin-bottom: 30px;
+}
+
+button {
+  height: 5rem;
+  width: 5rem;
+  border-radius: 50%;
+  border: 1px solid white;
+  box-shadow: 0px 0px 13px 2px #f2f7f3;
+  text-align: center;
+  font-size: 1.2rem;
+  padding: 0.5rem;
+  margin: 5px;
+  cursor: pointer;
+  background-color: black;
+  color: white;
+}
+
+button:hover {
+  box-shadow: 0px 0px 13px 4px #f2f7f3;
+}
+
+button:active {
+    box-shadow: 0 2px #f2f7f3;
+    transform: translateY(4px);
+}
+
+.start-button {
+  color: #00e436;
+}
+
+.pause-button {
+  color: #ffa300;
+}
+
+.stop-button {
+  color: #ff004d;
+}
