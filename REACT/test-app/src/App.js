@@ -10,13 +10,12 @@ function App() {
 
   return (
     <div className="App">
-
+{/* 
       <div className="inputAssignment">
       <ClassComponent inputText={inputText} setInputText={setInputText}/>
       <FunctionalComponent inputText={inputText} setInputText={setInputText}/>
-      </div>
-    <br>
-    </br>
+      </div> */}
+   
     <p>Enter a number:</p>
       <div className="keysAssignment">
         <ListComponent/>
