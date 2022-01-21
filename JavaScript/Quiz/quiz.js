@@ -6,6 +6,8 @@ quizContainer.classList.add("hide");
 let currentQuestionIndex, quizQuestion, answerList, pageCounter;
 let totalCorrect = 0;
 
+//comment
+
 //create six quiz pages with a question and answers
 let quizPages = [
   {
